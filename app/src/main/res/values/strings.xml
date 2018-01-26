@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Catan Counter</string>
+    <string name="teamA">Blue</string>
+    <string name="teamB">White</string>
+    <string name="remove">Remove VP</string>
+    <string name="settlement">Settlement</string>
+    <string name="City">City</string>
+    <string name="LongestRoad">Longest Road</string>
+    <string name="largestArmy">Largest Army</string>
+    <string name="development1">+1 VP</string>
+    <string name="development2">+2VP</string>
+    <string name="developmentminus">-1VP</string>
+</resources>

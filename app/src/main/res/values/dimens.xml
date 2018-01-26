@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="elementPadding">4dp</dimen>
+    <dimen name="newElementPadding">24dp</dimen>
+    <dimen name="scorePadding">5dp</dimen>
+    <dimen name="bottomPadding">50dp</dimen>
+    <dimen name="scoreSize">56sp</dimen>
+    <dimen name="teamSize">14sp</dimen>
+    <dimen name="buttonMargin">8dp</dimen>
+    <dimen name="logoMargin">30dp</dimen>
+</resources>
