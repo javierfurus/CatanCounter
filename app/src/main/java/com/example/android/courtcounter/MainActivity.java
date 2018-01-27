@@ -15,7 +15,9 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
 int scoreTeamA ;
 int scoreTeamB ;
-int originalColor = Color.parseColor("#e08600") ;
+int originalColor ;
+int winColor;
+int loseColor;
 private ToggleButton mySwitchA;
 private ToggleButton mySwitchB;
 private ToggleButton mySwitchA2;
@@ -37,6 +39,9 @@ private TextView teamB;
         mySwitchB2 = (ToggleButton) findViewById(R.id.myswitchb2);
         teamA = (TextView) findViewById(R.id.team_a);
         teamB = (TextView) findViewById(R.id.team_b);
+        originalColor = getResources().getColor(R.color.teams);
+        winColor = getResources().getColor(R.color.winColor);
+        loseColor = getResources().getColor(R.color.loseColor);
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
         /**
@@ -111,8 +116,9 @@ private TextView teamB;
 
     }
 
-
-
+    private void makeToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
 
     /**
      * Displays the given score for Team A.
@@ -122,12 +128,7 @@ private TextView teamB;
         if (scoreTeamA >= 10) {
             winColorA();
             loseColorB();
-            Context context = getApplicationContext();
-            CharSequence text = "Blue Won!";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
+            makeToast(getString(R.string.whiteWins));
         }
     }
     /**
@@ -138,13 +139,7 @@ private TextView teamB;
         if (scoreTeamB >= 10) {
             winColorB();
             loseColorA();
-
-            Context context = getApplicationContext();
-            CharSequence text = "White Won!";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
+            makeToast(getString(R.string.blueWins));
         }
     }
 
@@ -235,17 +230,17 @@ private TextView teamB;
      */
     public void winColorA()
     {
-            teamA.setBackgroundColor(0xFF12FF45);
+            teamA.setBackgroundColor(winColor);
     }
     public void winColorB() {
-        teamB.setBackgroundColor(0xFF12FF45);
+        teamB.setBackgroundColor(winColor);
 
     }
     public void loseColorA  () {
-        teamA.setBackgroundColor(Color.parseColor("#ff0000"));
+        teamA.setBackgroundColor(loseColor);
     }
     public void loseColorB  () {
-        teamB.setBackgroundColor(Color.parseColor("#ff0000"));
+        teamB.setBackgroundColor(loseColor);
     }
     public void originalColor () {
         teamA.setBackgroundColor(originalColor);

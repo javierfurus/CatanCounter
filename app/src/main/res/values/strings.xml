@@ -10,4 +10,6 @@
     <string name="development1">+1 VP</string>
     <string name="development2">+2VP</string>
     <string name="developmentminus">-1VP</string>
+    <string name="blueWins">Blue Wins!</string>
+    <string name="whiteWins">White Wins!</string>
 </resources>
