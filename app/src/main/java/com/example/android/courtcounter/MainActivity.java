@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 int scoreTeamA ;
 int scoreTeamB ;
@@ -18,16 +20,25 @@ private ToggleButton mySwitchA;
 private ToggleButton mySwitchB;
 private ToggleButton mySwitchA2;
 private ToggleButton mySwitchB2;
+private TextView scoreViewA;
+private TextView scoreViewB;
+private TextView teamA;
+private TextView teamB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
+        scoreViewA = (TextView) findViewById(R.id.team_a_score);
+        scoreViewB = (TextView) findViewById(R.id.team_b_score);
         mySwitchA = (ToggleButton) findViewById(R.id.myswitcha);
         mySwitchB = (ToggleButton) findViewById(R.id.myswitchb);
         mySwitchA2 = (ToggleButton) findViewById(R.id.myswitcha2);
         mySwitchB2 = (ToggleButton) findViewById(R.id.myswitchb2);
+        teamA = (TextView) findViewById(R.id.team_a);
+        teamB = (TextView) findViewById(R.id.team_b);
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
         /**
          * Adds SwitchFunction A.
          */
@@ -101,12 +112,13 @@ private ToggleButton mySwitchB2;
     }
 
 
+
+
     /**
      * Displays the given score for Team A.
      */
     public void displayForTeamA (int scoreTeamA) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(scoreTeamA));
+        scoreViewA.setText(String.valueOf(scoreTeamA));
         if (scoreTeamA >= 10) {
             winColorA();
             loseColorB();
@@ -122,8 +134,7 @@ private ToggleButton mySwitchB2;
      * Displays the given score for Team B.
      */
     public void displayForTeamB (int scoreTeamB) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(scoreTeamB));
+        scoreViewB.setText(String.valueOf(scoreTeamB));
         if (scoreTeamB >= 10) {
             winColorB();
             loseColorA();
@@ -222,29 +233,38 @@ private ToggleButton mySwitchB2;
     /**
      * These methods change the color of the teams when they win or lose or the game is reset
      */
-    public void winColorA() {
-            TextView teamA = (TextView) findViewById(R.id.team_a);
+    public void winColorA()
+    {
             teamA.setBackgroundColor(0xFF12FF45);
     }
     public void winColorB() {
-        TextView teamB = (TextView) findViewById(R.id.team_b);
         teamB.setBackgroundColor(0xFF12FF45);
 
     }
     public void loseColorA  () {
-        TextView teamA = (TextView) findViewById(R.id.team_a);
         teamA.setBackgroundColor(Color.parseColor("#ff0000"));
     }
     public void loseColorB  () {
-        TextView teamA = (TextView) findViewById(R.id.team_b);
-        teamA.setBackgroundColor(Color.parseColor("#ff0000"));
+        teamB.setBackgroundColor(Color.parseColor("#ff0000"));
     }
     public void originalColor () {
-        TextView teamA = (TextView) findViewById(R.id.team_a);
         teamA.setBackgroundColor(originalColor);
-
-        TextView teamB = (TextView) findViewById(R.id.team_b);
         teamB.setBackgroundColor(originalColor);
 
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("scoreA", scoreTeamA);
+        outState.putInt("scoreB",scoreTeamB);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        scoreTeamA = savedInstanceState.getInt("scoreA");
+        scoreTeamB = savedInstanceState.getInt("scoreB");
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
     }
 }
