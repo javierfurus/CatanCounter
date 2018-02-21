@@ -1,214 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/catanbackground2"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/catanbackground2" />
+
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    tools:context="com.example.android.courtcounter.MainActivity">
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/padding"
-    android:layout_marginLeft="@dimen/newElementPadding"
-    android:layout_marginRight="@dimen/newElementPadding"
-    android:layout_marginBottom="@dimen/bottomPadding"
-    tools:context="com.example.android.courtcounter.MainActivity">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:orientation="horizontal"
-    tools:context="com.example.android.courtcounter.MainActivity">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_weight="1"
-    android:layout_marginRight="@dimen/newElementPadding"
-    tools:context="com.example.android.courtcounter.MainActivity">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:context="com.example.android.courtcounter.MainActivity">
 
-    <TextView
-        android:id="@+id/team_a"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/teamA"
-        android:background="@color/teams"
-        android:textSize="@dimen/teamSize"
-        android:textColor="@color/colorTeam"
-        android:gravity="center_horizontal"
-        android:fontFamily="sans-serif-medium"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/scoreSize"
-        android:textColor="@color/colorScore"
-        android:fontFamily="sans-serif-light"
-        android:text="0"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="@dimen/scorePadding"
-        android:layout_marginBottom="@dimen/scorePadding"
-        android:id="@+id/team_a_score"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/development1"
-        android:layout_marginBottom="@dimen/buttonMargin"
-        android:onClick="addOneScoreA"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/settlement"
-        android:layout_marginBottom="@dimen/buttonMargin"
-        android:onClick="addOneScoreA"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/City"
-        android:layout_marginBottom="@dimen/buttonMargin"
-        android:onClick="addTwoScoreA"/>
-    <ToggleButton
-        android:id="@+id/myswitcha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginBottom="@dimen/buttonMargin"
-        android:textOn="@string/LongestRoad"
-        android:textOff="@string/LongestRoad"
-        />
-    <ToggleButton
-        android:id="@+id/myswitcha2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:textOn="@string/largestArmy"
-        android:textOff="@string/largestArmy"
-        android:layout_marginBottom="@dimen/buttonMargin"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/developmentminus"
-        android:onClick="removeScoreA"/>
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/bottomPadding"
+                android:layout_marginLeft="@dimen/newElementPadding"
+                android:layout_marginRight="@dimen/newElementPadding"
+                android:layout_marginTop="@dimen/padding"
+                tools:context="com.example.android.courtcounter.MainActivity">
 
-</LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    tools:context="com.example.android.courtcounter.MainActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:layout_marginLeft="@dimen/newElementPadding"
-        tools:context="com.example.android.courtcounter.MainActivity">
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/newElementPadding"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        tools:context="com.example.android.courtcounter.MainActivity">
 
-        <TextView
-            android:id="@+id/team_b"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/teamB"
-            android:textColor="@color/colorTeam"
-            android:gravity="center_horizontal"
-            android:background="@color/teams"
-            android:textSize="@dimen/teamSize"
-            android:fontFamily="sans-serif-medium"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/scoreSize"
-            android:textColor="@color/colorScore"
-            android:fontFamily="sans-serif-light"
-            android:text="0"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/scorePadding"
-            android:layout_marginBottom="@dimen/scorePadding"
-            android:id="@+id/team_b_score"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/development1"
-            android:layout_marginBottom="@dimen/buttonMargin"
-            android:onClick="addOneScoreB"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/settlement"
-            android:onClick="addOneScoreB"
-            android:layout_marginBottom="@dimen/buttonMargin"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/City"
-            android:onClick="addTwoScoreB"
-            android:layout_marginBottom="@dimen/buttonMargin"/>
-        <ToggleButton
-            android:id="@+id/myswitchb"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginBottom="@dimen/buttonMargin"
-            android:textOn="@string/LongestRoad"
-            android:textOff="@string/LongestRoad"
-            />
-        <ToggleButton
-            android:id="@+id/myswitchb2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginBottom="@dimen/buttonMargin"
-            android:textOn="@string/largestArmy"
-            android:textOff="@string/largestArmy"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/developmentminus"
-            android:onClick="removeScoreB"/>
+                        <TextView
+                            android:id="@+id/team_a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/teams"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center_horizontal"
+                            android:text="@string/teamA"
+                            android:textColor="@color/colorTeam"
+                            android:textSize="@dimen/teamSize" />
 
-    </LinearLayout>
-</LinearLayout>
+                        <TextView
+                            android:id="@+id/team_a_score"
+                            android:text="0"
+                            style="@style/score_style" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginBottom="@dimen/logoMargin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/logoMargin"
-        android:src="@drawable/catanlogo"
-        android:adjustViewBounds="true"/>
+                        <Button
+                            android:onClick="addOneScoreA"
+                            android:text="@string/development1"
+                            style="@style/scorebuttons" />
 
-    </RelativeLayout>
-    <Button
-        android:id="@+id/resetbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:text="reset"
-        android:onClick="resetScores"/>
-</RelativeLayout>
+                        <Button
+                            android:onClick="addOneScoreA"
+                            android:text="@string/settlement"
+                            style="@style/scorebuttons" />
+
+                        <Button
+                            android:onClick="addTwoScoreA"
+                            android:text="@string/City"
+                            style="@style/scorebuttons" />
+
+                        <ToggleButton
+                            android:id="@+id/myswitcha"
+                            android:layout_gravity="right"
+                            android:textOff="@string/LongestRoad"
+                            android:textOn="@string/LongestRoad"
+                            style="@style/scorebuttons" />
+
+                        <ToggleButton
+                            android:id="@+id/myswitcha2"
+                            android:layout_gravity="right"
+                            android:textOff="@string/largestArmy"
+                            android:textOn="@string/largestArmy"
+                            style="@style/scorebuttons" />
+
+                        <Button
+                            style="@style/scorebuttons"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="removeScoreA"
+                            android:text="@string/developmentminus" />
+
+                    </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/newElementPadding"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        tools:context="com.example.android.courtcounter.MainActivity">
+
+                        <TextView
+                            android:id="@+id/team_b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/teams"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center_horizontal"
+                            android:text="@string/teamB"
+                            android:textColor="@color/colorTeam"
+                            android:textSize="@dimen/teamSize" />
+
+                        <TextView
+                            android:id="@+id/team_b_score"
+                            android:text="0"
+                            style="@style/score_style" />
+
+                        <Button
+                            android:onClick="addOneScoreB"
+                            android:text="@string/development1"
+                            style="@style/scorebuttons" />
+
+                        <Button
+                            android:onClick="addOneScoreB"
+                            android:text="@string/settlement"
+                            style="@style/scorebuttons" />
+
+                        <Button
+                            android:onClick="addTwoScoreB"
+                            android:text="@string/City"
+                            style="@style/scorebuttons" />
+
+                        <ToggleButton
+                            android:id="@+id/myswitchb"
+                            android:layout_gravity="right"
+                            android:textOff="@string/LongestRoad"
+                            android:textOn="@string/LongestRoad"
+                            style="@style/scorebuttons" />
+
+                        <ToggleButton
+                            android:id="@+id/myswitchb2"
+                            android:layout_gravity="right"
+                            android:textOff="@string/largestArmy"
+                            android:textOn="@string/largestArmy"
+                            style="@style/scorebuttons" />
+
+                        <Button
+                            style="@style/scorebuttons"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="removeScoreB"
+                            android:text="@string/developmentminus" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/logoMargin"
+                    android:layout_marginTop="@dimen/logoMargin"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/catanlogo" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/resetbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="resetScores"
+                android:text="reset" />
+        </RelativeLayout>
 
     </ScrollView>
 </FrameLayout>
